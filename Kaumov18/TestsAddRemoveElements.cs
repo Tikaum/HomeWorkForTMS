@@ -22,7 +22,7 @@ namespace TestProjectKaumov
             driver.FindElement(By.XPath("//button[text()='Add Element']")).Click();
             driver.FindElement(By.XPath("//button[text()='Delete']")).Click();
             int del = driver.FindElements(By.XPath("//button[text()='Delete']")).Count();
-            Assert.IsTrue(del == 1);            
+            Assert.IsTrue(del == 1, "The number of elements on the page does not match the expected number (!= 1)");            
             driver.Quit();
         }
     }
