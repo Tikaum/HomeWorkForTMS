@@ -29,8 +29,7 @@ namespace TestProjectKaumov
             string name1 = nameField1.Text;
             Assert.IsNotEmpty(name1, "The username #1 is incorrect");
             IWebElement elementmove1 = driver.FindElement(By.XPath("//a[@href='/users/1']"));
-            actions.Click(elementmove1).Perform();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            actions.Click(elementmove1).Perform();            
             string ups = driver.FindElement(By.TagName("h1")).Text;
             Assert.IsFalse(ups == "Not Found", "The page specified in the user #1 link was not found");
             driver.Navigate().Back();
@@ -41,8 +40,7 @@ namespace TestProjectKaumov
             string name2 = nameField2.Text;
             Assert.IsNotEmpty(name2, "The username #2 is incorrect");
             IWebElement elementmove2 = driver.FindElement(By.XPath("//a[@href='/users/2']"));
-            actions.Click(elementmove2).Perform();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            actions.Click(elementmove2).Perform();            
             ups = driver.FindElement(By.TagName("h1")).Text;
             Assert.IsFalse(ups == "Not Found", "The page specified in the user #2 link was not found");
             driver.Navigate().Back();
@@ -53,8 +51,7 @@ namespace TestProjectKaumov
             string name3 = nameField3.Text;
             Assert.IsNotEmpty(name3, "The username #3 is incorrect");
             IWebElement elementmove3 = driver.FindElement(By.XPath("//a[@href='/users/3']"));
-            actions.Click(elementmove3).Perform();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            actions.Click(elementmove3).Perform();            
             ups = driver.FindElement(By.TagName("h1")).Text;
             Assert.IsFalse(ups == "Not Found", "The page specified in the user #3 link was not found");
             driver.Quit();
